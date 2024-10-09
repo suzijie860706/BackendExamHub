@@ -1,6 +1,6 @@
 @Project_Interview_HostAddress = http://localhost:5019
 
-GET {{Project_Interview_HostAddress}}/weatherforecast/
+GET {{Project_Interview_HostAddress}}/
 Accept: application/json
 
 ###

@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project_Interview.Models;
+using Newtonsoft.Json;
+using Microsoft.Data.SqlClient;
+using System.Data;
+
 
 namespace Project_Interview.Controllers
 {
@@ -18,34 +22,54 @@ namespace Project_Interview.Controllers
             _interviewContext = interviewContext;
         }
 
+
+        // GET: api/MyofficeAcpd
         [HttpGet]
-        public IActionResult Get()
+        public async Task<ActionResult<IEnumerable<MyofficeAcpd>>> GetMyofficeAcpds()
         {
-            return Ok();
+            try
+            {
+                return await _interviewContext.MyofficeAcpds
+                .FromSqlRaw("EXEC GetAllMyoffice_ACPD")
+                .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while Get MyofficeAcpd");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+            
         }
 
-        [HttpPost("Create")]
-        public IActionResult Create(MyofficeAcpd myofficeAcpd)
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <param name="myofficeAcpd"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> Post(MyofficeAcpd myofficeAcpd)
         {
-            _interviewContext.Database.ExecuteSqlInterpolated($@"
-                EXEC GetMyoffice_ACPD 
-                {myofficeAcpd.AcpdSid},
-                {myofficeAcpd.AcpdCname},
-                {myofficeAcpd.AcpdEname},
-                {myofficeAcpd.AcpdSname},
-                {myofficeAcpd.AcpdEmail},
-                {myofficeAcpd.AcpdStatus},
-                {myofficeAcpd.AcpdStop},
-                {myofficeAcpd.AcpdStopMemo},
-                {myofficeAcpd.AcpdLoginId},
-                {myofficeAcpd.AcpdLoginPw},
-                {myofficeAcpd.AcpdStopMemo},
-                {myofficeAcpd.AcpdNowdatetime},
-                {myofficeAcpd.AppdNowid},
-                {myofficeAcpd.AcpdUpddatetitme},
-                {myofficeAcpd.AcpdUpdid},
-                ");
-            return Ok();
+            try
+            {
+                // 轉成Json格式
+                string jsonData = JsonConvert.SerializeObject(myofficeAcpd);
+
+                // 使用參數化查詢呼叫存儲過程
+                var jsonParam = new SqlParameter("@JSON_Data", System.Data.SqlDbType.NVarChar)
+                {
+                    Value = jsonData
+                };
+
+                await _interviewContext.Database.ExecuteSqlRawAsync("EXEC InsertMyoffice_ACPD_FromJSON @JSON_Data", jsonParam);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while creating MyofficeAcpd");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
         }
+
+        
     }
 }

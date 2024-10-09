@@ -1,12 +1,38 @@
 [
   {
-    "ContainingType": "Project_Interview.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "Project_Interview.Controllers.UserController",
+    "Method": "GetMyofficeAcpds",
+    "RelativePath": "User",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Project_Interview.Models.MyofficeAcpd, Project_Interview, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Project_Interview.Controllers.UserController",
+    "Method": "Post",
+    "RelativePath": "User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "myofficeAcpd",
+        "Type": "Project_Interview.Models.MyofficeAcpd",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]
