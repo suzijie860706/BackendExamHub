@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Zijie\\source\\repos\\Project_Interview\\",
+  "WorkspaceRootPath": "C:\\Users\\Zijie\\Desktop\\BackendExamHub\\Project_Interview\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7BD5084E-5826-4BF3-BB28-D7E96CDDFB90}|Project_Interview\\Project_Interview.csproj|c:\\users\\zijie\\source\\repos\\project_interview\\project_interview\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BD5084E-5826-4BF3-BB28-D7E96CDDFB90}|Project_Interview\\Project_Interview.csproj|solutionrelative:project_interview\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BD5084E-5826-4BF3-BB28-D7E96CDDFB90}|Project_Interview\\Project_Interview.csproj|c:\\users\\zijie\\desktop\\backendexamhub\\project_interview\\project_interview\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BD5084E-5826-4BF3-BB28-D7E96CDDFB90}|Project_Interview\\Project_Interview.csproj|solutionrelative:project_interview\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BD5084E-5826-4BF3-BB28-D7E96CDDFB90}|Project_Interview\\Project_Interview.csproj|c:\\users\\zijie\\desktop\\backendexamhub\\project_interview\\project_interview\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BD5084E-5826-4BF3-BB28-D7E96CDDFB90}|Project_Interview\\Project_Interview.csproj|solutionrelative:project_interview\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Zijie\\Desktop\\BackendExamHub\\Project_Interview\\Project_Interview\\Program.cs",
+              "RelativeDocumentMoniker": "Project_Interview\\Program.cs",
+              "ToolTip": "C:\\Users\\Zijie\\Desktop\\BackendExamHub\\Project_Interview\\Project_Interview\\Program.cs",
+              "RelativeToolTip": "Project_Interview\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T03:13:24.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\Zijie\\source\\repos\\Project_Interview\\Project_Interview\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Project_Interview\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\Zijie\\source\\repos\\Project_Interview\\Project_Interview\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Project_Interview\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Zijie\\Desktop\\BackendExamHub\\Project_Interview\\Project_Interview\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Project_Interview\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Zijie\\Desktop\\BackendExamHub\\Project_Interview\\Project_Interview\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Project_Interview\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T02:01:26.037Z",
               "EditorCaption": ""
